@@ -1,12 +1,12 @@
-#Backend Setup
+# Backend Setup
 cd server
 npm install
 
-Frontend Setup
-cd cliet
+# Frontend Setup
+cd clinet
 npm install
 
-# Start the Express backend
+# Start the express backend
 cd server
 node --watch index.js
 

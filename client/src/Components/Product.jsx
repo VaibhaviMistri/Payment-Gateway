@@ -1,6 +1,6 @@
-import apple from '../Assets/apple.png';
+import apple from '../assets/apple.png';
 import { useState } from 'react';
-import { createOrder, validateOrder } from "../Services/PaymentService.js";
+import { createOrder, validateOrder } from "../services/paymentService.js";
 
 export const Product = () => {
     const [loading, setLoading] = useState(false);
@@ -52,7 +52,7 @@ export const Product = () => {
             const rzp1 = new window.Razorpay(options);
             rzp1.on("payment.failed", (response) => {
                 console.error('Payment failed', response.error);
-                alert('Something went wrong. Please try again.'); 
+                alert('Something went wrong. Please try again.');
             });
             rzp1.open();
         } catch (error) {
@@ -67,9 +67,12 @@ export const Product = () => {
         <>
             <h2>Apple</h2>
             <img
-                src={ apple }
+                src={apple}
                 alt="Apple"
-                style={{ height: "10rem", width: "10rem" }}
+                style={{
+                    height: "10rem",
+                    width: "10rem"
+                }}
             />
             <button onClick={handlePayment} disabled={loading}>
                 {loading ? "Processing..." : "Pay"}

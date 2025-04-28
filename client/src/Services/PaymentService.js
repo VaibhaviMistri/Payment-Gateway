@@ -1,4 +1,4 @@
-const API_BASE = process.env.REACT_APP_API_BAZE; 
+const API_BASE = process.env.REACT_APP_API_BASE; 
 
 export const createOrder = async ({ amount, currency, receipt }) => {
     try {
